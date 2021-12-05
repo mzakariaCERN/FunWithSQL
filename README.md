@@ -55,3 +55,20 @@ SELECT column_name, data_type
 FROM information_schema.columns 
 WHERE table_name = 'university_professors' AND table_schema = 'public';
 ```
+
+To create tables
+
+```
+CREATE TABLE weather (
+clouds text,
+temp numberic,
+weather_station char(5));
+```
+
+
+to add an additional column after ctrating an empty table
+
+```
+ALTER TABLE table_name
+ADD COLUMN column_name data_type;
+```
