@@ -72,3 +72,25 @@ to add an additional column after ctrating an empty table
 ALTER TABLE table_name
 ADD COLUMN column_name data_type;
 ```
+
+* Data types  
+text         | variable text  
+varchar(n)   | up to n charachters  
+char(n)      | fixes n character  
+boolean      | yes, no, Null  
+date, time, timestamp |    
+numberic (n,m)  | n = 3, m =2 gives 3 digists with 2 sigfigs  
+integer |      
+
+
+
+
+
+Truncate a column by converting the data type to up to x (retain a substring x of every value in the column)
+
+```
+ALTER TABLE table_name
+ALTER COLUMN column_name
+TYPE varchar(x)
+USING SUBSTRING(column_name FROM 1 FOR x)
+```
