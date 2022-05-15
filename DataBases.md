@@ -29,3 +29,13 @@ There's a very basic way of finding out what qualifies for a key in an existing,
     1. Count the distinct records for all possible combinations of columns. If the resulting number x equals the number of all rows in the table for a combination, you have discovered a superkey.
 
     2. Then remove one column after another until you can no longer remove columns without seeing the number x decrease. If that is the case, you have discovered a (candidate) key.
+
+
+To set a column as a primary kye (in postgres)
+
+```
+ALTER TABLE table_name
+ADD CONSTRAINT some_name PRIMARY KEY (column_name)
+```
+
+You can also have multiple columns in the bracket. But generally speaking, the fewer columns in a primary kye, the better.
