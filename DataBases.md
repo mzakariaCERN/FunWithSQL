@@ -52,3 +52,7 @@ to add a surrogate key
 ALTER TABLE professors 
 add column id serial primary key;
 ```
+
+-- Make id a primary key and rename it to professors_pkey
+ALTER TABLE professors 
+ADD CONSTRAINT professors_pkey PRIMARY KEY (id);
