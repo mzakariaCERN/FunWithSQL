@@ -74,7 +74,7 @@ UPDATE cars
 SET id = CONCAT(make, model);
 
 -- Make id a primary key
-update table cars
+alter table cars
 add constraint id_pk primary key(id);
 
 -- Have a look at the table
