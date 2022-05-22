@@ -71,6 +71,12 @@ ADD COLUMN id varchar(128);
 
 -- Update id with make + model
 UPDATE cars
-set id = concat(make, model);
+SET id = CONCAT(make, model);
 
+-- Make id a primary key
+update table cars
+add constraint id_pk primary key(id);
+
+-- Have a look at the table
+SELECT * FROM cars;
 ```
