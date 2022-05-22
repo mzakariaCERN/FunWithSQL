@@ -41,3 +41,14 @@ ADD CONSTRAINT some_name PRIMARY KEY (column_name)
 You can also have multiple columns in the bracket. But generally speaking, the fewer columns in a primary kye, the better.
 
 Ever table should have a primary key identified
+
+
+## Surrogate keys
+
+to add a surrogate key
+
+```
+-- Add the new column to the table
+ALTER TABLE professors 
+add column id serial primary key;
+```
