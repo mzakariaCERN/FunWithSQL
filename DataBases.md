@@ -44,8 +44,15 @@ Ever table should have a primary key identified
 
 
 ## Surrogate keys
+This is a key that is not a column that exists in the table. We create it eather by making an index, or by combining two columns. 
 
-to add a surrogate key
+Why would you need that? 
+1. Primary key should be based on as few columns as possible
+2. They key should now change in time. Some columns might be good keys, but there is a chance they would change in time
+
+There is a specific data type for surrogate keys in postgres, it is called Seriel
+
+two ways to add a surrogate key
 
 ```
 -- Add the new column to the table
