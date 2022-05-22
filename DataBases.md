@@ -54,5 +54,23 @@ add column id serial primary key;
 ```
 
 -- Make id a primary key and rename it to professors_pkey
+```
 ALTER TABLE professors 
 ADD CONSTRAINT professors_pkey PRIMARY KEY (id);
+```
+
+Another way is to combine two exisisting columns to get a surrogate key
+```
+-- Count the number of distinct rows with columns make, model
+SELECT COUNT(DISTINCT(make, model)) 
+FROM cars;
+
+-- Add the id column
+ALTER TABLE cars
+ADD COLUMN id varchar(128);
+
+-- Update id with make + model
+UPDATE cars
+set id = concat(make, model);
+
+```
