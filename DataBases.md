@@ -104,3 +104,10 @@ ADD CONSTRAINT a_fkey FOREIGN KEY (b_id) REFERENCES b (id);
 Table a should now refer to table b, via b_id, which points to id. a_fkey is, as usual, a constraint name you can choose on your own. 
 
 Pay attention to the naming convention employed here: Usually, a foreign key referencing another primary key with name id is named x_id, where x is the name of the referencing table in the singular form.
+
+```
+-- Add a foreign key on professors referencing universities
+ALTER TABLE professors 
+ADD CONSTRAINT professors_fkey FOREIGN KEY (university_id) REFERENCES university (id);
+```
+
