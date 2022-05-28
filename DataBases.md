@@ -111,3 +111,4 @@ ALTER TABLE professors
 ADD CONSTRAINT professors_fkey FOREIGN KEY (university_id) REFERENCES universities (id);
 ```
 
+While foreign keys and primary keys are not strictly necessary for join queries, they greatly help by telling you what to expect. For instance, you can be sure that records referenced from table A will always be present in table B – so a join from table A will always find something in table B. If not, the foreign key constraint would be violated.
