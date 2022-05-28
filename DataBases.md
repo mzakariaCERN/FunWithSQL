@@ -87,3 +87,11 @@ add constraint id_pk primary key(id);
 -- Have a look at the table
 SELECT * FROM cars;
 ```
+
+A Foreign Key (FK) in a table points to a primary key of another table.
+- FK domain and data type must be the same for PK. 
+- If you added a data point to the table with an FK entry that is not within the PK values you will get an error (FK constraint)
+
+FK is not an actual key: duplicates and null values are allowed.
+
+
