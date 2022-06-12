@@ -119,3 +119,13 @@ The syntax for declaring a foreign key while adding a new column is as follows:
 ALTER TABLE table_name
 ADD COLUMN column_name data_type REFERENCES other_table_name (other_column_name);
 ```
+
+
+```
+
+-- Update professor_id to professors.id where firstname, lastname correspond to rows in professors
+UPDATE affiliations
+SET professor_id = professors.id
+FROM professors
+WHERE affiliations.firstname = professors.firstname AND affiliations.lastname = professors.lastname;
+```
