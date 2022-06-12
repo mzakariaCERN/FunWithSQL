@@ -112,3 +112,10 @@ ADD CONSTRAINT professors_fkey FOREIGN KEY (university_id) REFERENCES universiti
 ```
 
 While foreign keys and primary keys are not strictly necessary for join queries, they greatly help by telling you what to expect. For instance, you can be sure that records referenced from table A will always be present in table B – so a join from table A will always find something in table B. If not, the foreign key constraint would be violated.
+
+
+The syntax for declaring a foreign key while adding a new column is as follows:
+```
+ALTER TABLE table_name
+ADD COLUMN column_name data_type REFERENCES other_table_name (other_column_name);
+```
