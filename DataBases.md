@@ -150,3 +150,9 @@ WHERE constraint_type = 'FOREIGN KEY';
 Altering a key constraint doesn't work with ALTER COLUMN. Instead, you have to DROP the key constraint and then ADD a new one with a different ON DELETE behavior.
 
 For deleting constraints, though, you need to know their name. This information is also stored in information_schema.
+
+```
+-- Drop the right foreign key constraint
+ALTER TABLE affiliations
+drop CONSTRAINT affiliations_organization_id_fkey;
+```
