@@ -156,3 +156,9 @@ For deleting constraints, though, you need to know their name. This information 
 ALTER TABLE affiliations
 drop CONSTRAINT affiliations_organization_id_fkey;
 ```
+
+-- Add a new foreign key constraint from affiliations to organizations which cascades deletion
+```
+ALTER TABLE affiliations
+ADD CONSTRAINT affiliations_organization_id_fkey foreign KEY (organization_id) REFERENCES organizations (id) ON DELETE cascade;
+```
