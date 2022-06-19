@@ -129,3 +129,20 @@ SET professor_id = professors.id
 FROM professors
 WHERE affiliations.firstname = professors.firstname AND affiliations.lastname = professors.lastname;
 ```
+
+
+* Referential Integrity
+
+Means that when a record referencing another table must reer to an existing record in that table. We enforce this using Foreign Keys
+
+When A is referenced by B. We can violate referential integrity in 2 ways:
+1. If you delete record in B that has a reference in A
+2. if you insert a record in A that doesn't have a reference in B
+
+To identify the constraints in you table use the following:
+```
+-- Identify the correct constraint name
+SELECT constraint_name, table_name, constraint_type
+FROM information_schema.table_constraints
+WHERE constraint_type = 'FOREIGN KEY';
+```
